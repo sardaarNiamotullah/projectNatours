@@ -1,0 +1,182 @@
+$colorPrimary: #55c57a;
+$colorPrimary-light: #7ed56f;
+$colorPrimary-dark: #28b485;
+
+$colorFont-white: #fff;
+$colorFont-grey: #777;
+$colorFont-black: #000;
+
+
+*,
+*::after,
+*::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    padding: 2.5rem;  
+    font-family: "lato" sans-serif;
+    font-size: 1.6rem;
+    font-weight: 400;
+    line-height: 1.7;
+    color: $colorFont-grey;
+    box-sizing: border-box;
+}
+
+.header {
+    position: relative;
+    height: 90vh;
+    background: linear-gradient(to left bottom, rgba($colorPrimary-light, .8), rgba($colorPrimary-dark, .8)), url(../img/header.jpg);
+    background-size: cover;
+    background-position: left;
+    clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+
+    &__logoBox {
+        position: absolute;
+        top: 4.5rem;
+        left: 4.5rem;
+    }
+
+    &__textBox {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -65%);
+        text-align: center;
+    }
+
+    &__Logo {
+        height: 3rem;
+    }
+
+    &__headingPrimary {
+        color: $colorFont-white;
+        text-transform: uppercase;
+
+        &--main {
+            font-size: 6rem;
+            font-weight: 400;
+            letter-spacing: 3.5rem;
+            display: block;
+            
+            animation: moveInRight 2s ease-out;
+        }
+
+        &--sub {
+            font-size: 3rem;
+            font-weight: 200;
+            letter-spacing: 1rem;
+            margin-bottom: 5rem;
+            display: block;
+
+            animation: moveInLeft 2s ease-out;
+        }
+
+        &--lastLetter {
+            letter-spacing: 0rem;
+        }
+    }
+
+}
+
+%btnPlaceholder {
+    text-decoration: none;
+    text-transform: uppercase;
+    box-shadow: 0 .5rem 2rem 1rem rgba($colorFont-black, 0.15);
+    transition: all .2s;
+}
+
+.btn {
+
+    &:link {
+        @extend %btnPlaceholder;
+    }
+
+    &:visited {
+        @extend %btnPlaceholder;
+    }
+
+    &:active {
+        transform: translateY(1px);
+        box-shadow: 0 .5px 2rem .5rem rgba($colorFont-black, 0.20);
+    }
+
+    &--white {
+        display: inline-block;
+        color: $colorFont-grey;
+        background-color: #fff;
+        padding: 1.5rem 3rem;
+        border-radius: 5rem;
+        position: relative;
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            transition: all .3s;
+            background-color: #fff;
+            border-radius: 5rem;
+            z-index: -1;
+        }
+
+        &:hover::after {
+            opacity: 0;
+            transform: scale(1.5);
+        }
+    }
+
+    &--animated {
+        animation: moveUp 1.5s ease-out .5s backwards;
+    }
+}
+
+@keyframes moveInRight {
+    0% {
+        opacity: 0;
+        transform: translateX(-10rem);
+    }
+    80% {
+        transform: translateX(.5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+
+@keyframes moveInLeft {
+    0% {
+        opacity: 0;
+        transform: translateX(10rem);
+    }
+    80% {
+        transform: translateX(-.5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translateX(0rem);
+    }
+}
+
+@keyframes moveUp {
+    0% {
+        opacity: 0;
+        transform: translateY(5rem);
+    }
+    80% {
+        transform: translateY(-.5rem);
+    }
+    100% {
+        opacity: 1;
+        transform: translate(0rem);
+    }
+}
