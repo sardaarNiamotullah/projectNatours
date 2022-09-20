@@ -1,0 +1,40 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+.composition {
+    position: relative;
+
+    &-img {
+        position: absolute;
+        @include shadowNorm-big;
+        transition: all .2s;
+        width: 55%;
+        aspect-ratio: 1.5/1;
+        border-radius: 5px;
+        outline-offset: 1.5rem;
+
+        &--1 {
+            top: -2rem;
+        }
+
+        &--2 {
+            right: 0px;
+            top: 3.5rem;
+        }
+
+        &--3 {
+            left: 23%;
+            top: 10.5rem;
+        }
+
+        &:hover {
+            outline: 1.25rem solid $colorPrimary;
+            transform: scale(1.1) translateY(-.5rem);
+            z-index: 1;
+            @include shadowFar-big;
+        }
+    }
+
+    &:hover &-img:not(:hover) {
+        transform: scale(.95);
+    }
+}

@@ -5,8 +5,7 @@
     @include clearFix;
     max-width: $gridWidth;
     margin: 0 auto;
-    background-color: aquamarine;
-    
+
     &:not(:last-child) {
         margin-bottom: $gridMargin;
     }
@@ -22,27 +21,22 @@
 
     .col-1-of-2 {
         width: calc((100% - $gridMargin)/2);
-        background-color: #39f;
     }
 
     .col-1-of-3 {
         width: calc((100% - 2*$gridMargin)/3);
-        background-color: #39f;
     }
 
     .col-1-of-4 {
         width: calc((100% - 3*$gridMargin)/4);
-        background-color: #39f;
     }
 
     .col-2-of-3 {
         width: calc(2*((100% - 2*$gridMargin)/3) + $gridMargin);
-        background-color: #39f;
     }
 
     .col-2-of-4 {
         width: calc(2*((100% - 3*$gridMargin)/4) + $gridMargin);
-        background-color: #39f;
     }
 
 }

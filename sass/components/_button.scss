@@ -1,27 +1,41 @@
 @use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
 
 .btn {
 
     &:link,
     &:visited {
-        text-decoration: none;
-        text-transform: uppercase;
-        box-shadow: 0 .5rem 2rem 1rem rgba($colorFont-black, 0.15);
         transition: all .2s;
+        text-decoration: none;
+        display: inline-block;
     }
+    &:hover {transform: translateY(-1px);}
+    &:active {transform: translateY(1px);}
+    &--animated {animation: moveUp 1.5s ease-out .5s backwards;}
 
-    &:active {
-        transform: translateY(1px);
-        box-shadow: 0 .5px 2rem .5rem rgba($colorFont-black, 0.20);
+    &--secondary {
+        color: transparent;
+        background: linear-gradient(to right, $colorPrimary-light, $colorPrimary-dark);
+        -webkit-background-clip: text;
+        border-bottom: 1px solid $colorPrimary;
+        transition: all .1s;
+        padding: 0 .5rem;
+
+        &:hover {
+            color: white;
+            background-color: linear-gradient(to right, $colorPrimary-light, $colorPrimary-dark);
+            -webkit-background-clip: border-box;
+            @include shadowNorm-small;
+        }
     }
 
     &--white {
-        display: inline-block;
-        color: $colorFont-grey;
-        background-color: #fff;
         padding: 1.5rem 3rem;
         border-radius: 5rem;
         position: relative;
+        color: $colorFont-grey;
+        background-color: white;
+        @include shadowNorm;
 
         &::after {
             content: "";
@@ -31,18 +45,18 @@
             height: 100%;
             width: 100%;
             transition: all .3s;
-            background-color: #fff;
+            background-color: white;
             border-radius: 5rem;
             z-index: -1;
+        }
+
+        &:active {
+            @include shadowClose;
         }
 
         &:hover::after {
             opacity: 0;
             transform: scale(1.5);
         }
-    }
-
-    &--animated {
-        animation: moveUp 1.5s ease-out .5s backwards;
     }
 }

@@ -1,3 +1,5 @@
+@use "variables" as *;
+
 @mixin clearFix {
 
     &::after {
@@ -6,4 +8,24 @@
         clear: both;
     }
     
+}
+
+@mixin shadowNorm {
+    box-shadow: 0 .5rem 2rem 1rem rgba($colorFont-black, 0.15);
+}
+
+@mixin shadowNorm-small {
+    box-shadow: 0 .5rem 3rem .25rem rgba($colorFont-black, 0.15);
+}
+
+@mixin shadowNorm-big {
+    box-shadow: 0 .5rem 3rem 2rem rgba($colorFont-black, 0.15);
+}
+
+@mixin shadowClose {
+    box-shadow: 0 .5px 2rem .5rem rgba($colorFont-black, 0.20);
+}
+
+@mixin shadowFar-big {
+    box-shadow: 0 .5px 3rem 3rem rgba($colorFont-black, 0.10);
 }
