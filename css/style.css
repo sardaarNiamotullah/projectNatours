@@ -103,6 +103,20 @@ body {
 
 .headingTertiary {
   text-transform: uppercase;
+  font-size: 1.7rem;
+  font-weight: 600;
+}
+
+[class^=icon] {
+  color: transparent;
+  background: linear-gradient(to right, #7ed56f, #28b485);
+  -webkit-background-clip: text;
+  font-size: 6.5rem;
+  padding-top: 1rem;
+}
+
+.marginTop-medium {
+  margin-top: 1.5rem;
 }
 
 .marginBottom-big {
@@ -206,6 +220,29 @@ body {
   transform: scale(0.95);
 }
 
+.featureBoxContainer {
+  background-color: rgba(255, 255, 255, 0.8);
+  border-radius: 5px;
+  width: 100%;
+  aspect-ratio: 1/1.35;
+  margin: 23.5vh 0;
+  transition: all 0.2s;
+}
+.featureBoxContainer .featureBox {
+  text-align: center;
+  width: 100%;
+  aspect-ratio: 1/1.15;
+  padding: 3rem 1.5rem;
+  overflow: hidden;
+  border: 0;
+}
+.featureBoxContainer .featureBox .paragraph {
+  padding: 0 0.9rem;
+}
+.featureBoxContainer:hover {
+  transform: translateY(-2rem) scale(1.05);
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -216,29 +253,29 @@ body {
   clear: both;
 }
 .row:not(:last-child) {
-  margin-bottom: 6rem;
+  margin-bottom: 7rem;
 }
 .row [class^=col-] {
   display: inline-block;
   float: left;
 }
 .row [class^=col-]:not(:last-child) {
-  margin-right: 6rem;
+  margin-right: 7rem;
 }
 .row .col-1-of-2 {
-  width: calc((100% - 6rem) / 2);
+  width: calc((100% - 7rem) / 2);
 }
 .row .col-1-of-3 {
-  width: calc((100% - 12rem) / 3);
+  width: calc((100% - 14rem) / 3);
 }
 .row .col-1-of-4 {
-  width: calc((100% - 18rem) / 4);
+  width: calc((100% - 21rem) / 4);
 }
 .row .col-2-of-3 {
-  width: calc(2 * (100% - 12rem) / 3 + 6rem);
+  width: calc(2 * (100% - 14rem) / 3 + 7rem);
 }
 .row .col-2-of-4 {
-  width: calc(2 * (100% - 18rem) / 4 + 6rem);
+  width: calc(2 * (100% - 21rem) / 4 + 7rem);
 }
 
 .header {
@@ -269,6 +306,18 @@ body {
   background-color: #f7f7f7;
   margin-top: -15vh;
   padding-top: 30vh;
+  padding-bottom: 30vh;
+}
+
+.featureSection {
+  background: linear-gradient(to left bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/midSection.jpg);
+  background-position: bottom;
+  background-size: cover;
+  margin-top: -15vh;
+  transform: skewY(-5deg);
+}
+.featureSection > * {
+  transform: skewY(5deg);
 }
 
 /*# sourceMappingURL=style.css.map */

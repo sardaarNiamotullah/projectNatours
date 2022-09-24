@@ -4,4 +4,21 @@
     background-color: $colorGrey-light;
     margin-top: -15vh;
     padding-top: 30vh;
+    padding-bottom: 30vh;
+}
+
+.featureSection {
+    background: linear-gradient(to left bottom, 
+    rgba($colorPrimary-light, .8), rgba($colorPrimary-dark, .8)), 
+    url(../img/midSection.jpg);
+    background-position: bottom;
+    background-size: cover;
+    margin-top: -15vh;
+
+
+    transform: skewY(-5deg);
+    & > * {
+        transform: skewY(5deg);
+    }
+    
 }
