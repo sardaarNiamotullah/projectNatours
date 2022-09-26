@@ -56,7 +56,7 @@ body {
 }
 
 body {
-  font-family: "lato" sans-serif;
+  font-family: "lato", sans-serif;
   font-size: 1.6rem;
   font-weight: 400;
   line-height: 1.7;
@@ -76,8 +76,8 @@ body {
 }
 .headingPrimary--sub {
   font-size: 3rem;
-  font-weight: 200;
-  letter-spacing: 1rem;
+  font-weight: 400;
+  letter-spacing: 1.2rem;
   margin-bottom: 5rem;
   display: block;
   animation: moveInLeft 2s ease-out;
@@ -93,7 +93,7 @@ body {
   text-transform: uppercase;
   letter-spacing: 0.25rem;
   color: transparent;
-  background: linear-gradient(to right, #7ed56f, #28b485);
+  background: linear-gradient(to right, #7ed56f, #168862);
   -webkit-background-clip: text;
   transition: all 0.2s;
 }
@@ -109,7 +109,7 @@ body {
 
 [class^=icon] {
   color: transparent;
-  background: linear-gradient(to right, #7ed56f, #28b485);
+  background: linear-gradient(to right, #7ed56f, #168862);
   -webkit-background-clip: text;
   font-size: 6.5rem;
   padding-top: 1rem;
@@ -117,6 +117,10 @@ body {
 
 .marginTop-medium {
   margin-top: 1.5rem;
+}
+
+.marginTop-big {
+  margin-top: 8.5rem;
 }
 
 .marginBottom-big {
@@ -147,25 +151,26 @@ body {
 }
 .btn--secondary {
   color: transparent;
-  background: linear-gradient(to right, #7ed56f, #28b485);
+  background: linear-gradient(to right, #7ed56f, #168862);
   -webkit-background-clip: text;
-  border-bottom: 1px solid #55c57a;
+  border-bottom: 1px solid #4ac774;
   transition: all 0.1s;
   padding: 0 0.5rem;
 }
 .btn--secondary:hover {
   color: white;
-  background-color: linear-gradient(to right, #7ed56f, #28b485);
+  background-color: linear-gradient(to right, #7ed56f, #168862);
   -webkit-background-clip: border-box;
   box-shadow: 0 0.5rem 3rem 0.25rem rgba(0, 0, 0, 0.15);
 }
 .btn--white {
+  color: #777;
+  background-color: white;
   padding: 1.5rem 3rem;
   border-radius: 5rem;
   position: relative;
-  color: #777;
-  background-color: white;
-  box-shadow: 0 0.5rem 2rem 1rem rgba(0, 0, 0, 0.15);
+  text-transform: uppercase;
+  box-shadow: 0 0.5rem 2.5rem 1rem rgba(0, 0, 0, 0.1);
 }
 .btn--white::after {
   content: "";
@@ -174,17 +179,50 @@ body {
   left: 0;
   height: 100%;
   width: 100%;
-  transition: all 0.3s;
-  background-color: white;
+  transition: all 0.5s;
   border-radius: 5rem;
   z-index: -1;
 }
 .btn--white:active {
-  box-shadow: 0 0.5px 2rem 0.5rem rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0.5px 2.5rem 0.5rem rgba(0, 0, 0, 0.15);
 }
 .btn--white:hover::after {
   opacity: 0;
   transform: scale(1.5);
+}
+.btn--white::after {
+  background-color: white;
+}
+.btn--green {
+  color: #777;
+  background-color: #4ac774;
+  color: white;
+  padding: 1.5rem 3rem;
+  border-radius: 5rem;
+  position: relative;
+  text-transform: uppercase;
+  box-shadow: 0 0.5rem 2.5rem 1rem rgba(0, 0, 0, 0.1);
+}
+.btn--green::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  transition: all 0.5s;
+  border-radius: 5rem;
+  z-index: -1;
+}
+.btn--green:active {
+  box-shadow: 0 0.5px 2.5rem 0.5rem rgba(0, 0, 0, 0.15);
+}
+.btn--green:hover::after {
+  opacity: 0;
+  transform: scale(1.5);
+}
+.btn--green::after {
+  background-color: #4ac774;
 }
 
 .composition {
@@ -211,7 +249,7 @@ body {
   top: 10.5rem;
 }
 .composition-img:hover {
-  outline: 1.25rem solid #55c57a;
+  outline: 1.25rem solid #4ac774;
   transform: scale(1.1) translateY(-0.5rem);
   z-index: 1;
   box-shadow: 0 0.5px 3rem 3rem rgba(0, 0, 0, 0.1);
@@ -226,6 +264,7 @@ body {
   width: 100%;
   aspect-ratio: 1/1.35;
   margin: 23.5vh 0;
+  box-shadow: 0 0.5rem 3rem 2rem rgba(0, 0, 0, 0.15);
   transition: all 0.2s;
 }
 .featureBoxContainer .featureBox {
@@ -243,6 +282,112 @@ body {
   transform: translateY(-2rem) scale(1.05);
 }
 
+.cardHolder {
+  position: relative;
+  width: 95%;
+  aspect-ratio: 1/1.55;
+  margin-bottom: 3rem;
+  perspective: 100rem;
+}
+.cardHolder .card {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1/1.55;
+  border-radius: 0.5rem;
+  backface-visibility: hidden;
+  transition: all 1s ease;
+  box-shadow: 0 0.5rem 3rem 2rem rgba(0, 0, 0, 0.15);
+}
+.cardHolder .card__front {
+  background-color: #fff;
+}
+.cardHolder .card__back {
+  transform: rotateY(180deg);
+  color: #fff;
+}
+.cardHolder .card__back--1 {
+  background: linear-gradient(to right bottom, rgb(255, 214, 79), rgb(212, 159, 11));
+}
+.cardHolder .card__back--2 {
+  background: linear-gradient(to right bottom, #4ac774, #168862);
+}
+.cardHolder .card__back--3 {
+  background: linear-gradient(to right bottom, rgb(71, 71, 190), rgb(45, 45, 155));
+}
+.cardHolder .card__picture {
+  position: absolute;
+  width: 100%;
+  aspect-ratio: 1/0.6;
+  background-size: cover;
+  background-position: center;
+  clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+  overflow: hidden;
+  border-radius: 0.5rem 0.5rem 0 0;
+  background-blend-mode: screen;
+}
+.cardHolder .card__picture--1 {
+  background-image: linear-gradient(to right bottom, rgb(255, 214, 79), rgb(212, 159, 11)), url(../img/tourOption1.jpg);
+}
+.cardHolder .card__picture--2 {
+  background-image: linear-gradient(to right bottom, #4ac774, #168862), url(../img/tourOption2.jpg);
+}
+.cardHolder .card__picture--3 {
+  background-image: linear-gradient(to right bottom, rgb(71, 71, 190), rgb(45, 45, 155)), url(../img/tourOption3.jpg);
+}
+.cardHolder .card__heading {
+  text-align: right;
+  position: absolute;
+  width: 55%;
+  top: 28%;
+  right: 10%;
+  color: white;
+  font-size: 2.25rem;
+  font-weight: 400;
+}
+.cardHolder .card__heading .span__heading {
+  -webkit-box-decoration-break: clone;
+  padding: 1rem 1rem;
+}
+.cardHolder .card__heading .span__heading--1 {
+  background: linear-gradient(to right bottom, rgba(255, 214, 79, 0.85), rgba(212, 159, 11, 0.85));
+}
+.cardHolder .card__heading .span__heading--2 {
+  background: linear-gradient(to right bottom, rgba(74, 199, 116, 0.85), rgba(22, 136, 98, 0.85));
+}
+.cardHolder .card__heading .span__heading--3 {
+  background: linear-gradient(to right bottom, rgba(71, 71, 190, 0.85), rgba(45, 45, 155, 0.85));
+}
+.cardHolder .card .fasilities {
+  font-size: 1.5rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, 5%);
+  list-style: none;
+}
+.cardHolder .card .fasilities__item {
+  border-bottom: 1px solid rgba(221, 214, 214, 0.8);
+  padding: 0.6rem 0;
+}
+.cardHolder .card__cta {
+  padding-top: 40%;
+}
+.cardHolder .card__cta .only {
+  text-transform: uppercase;
+  font-weight: 400;
+}
+.cardHolder .card__cta .priceTag {
+  font-size: 6rem;
+  font-weight: 100;
+  margin-bottom: 5.5rem;
+}
+.cardHolder:hover .card__front {
+  transform: rotateY(-180deg);
+}
+.cardHolder:hover .card__back {
+  transform: rotateY(0deg);
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -251,9 +396,6 @@ body {
   content: "";
   display: table;
   clear: both;
-}
-.row:not(:last-child) {
-  margin-bottom: 7rem;
 }
 .row [class^=col-] {
   display: inline-block;
@@ -281,7 +423,7 @@ body {
 .header {
   position: relative;
   height: 95vh;
-  background: linear-gradient(to left bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/header.jpg);
+  background: linear-gradient(to left bottom, rgba(126, 213, 111, 0.8), rgba(22, 136, 98, 0.8)), url(../img/header.jpg);
   background-size: cover;
   background-position: left;
   clip-path: polygon(0 0, 100% 0, 100% 80vh, 0 100%);
@@ -310,7 +452,7 @@ body {
 }
 
 .featureSection {
-  background: linear-gradient(to left bottom, rgba(126, 213, 111, 0.8), rgba(40, 180, 133, 0.8)), url(../img/midSection.jpg);
+  background: linear-gradient(to left bottom, rgba(126, 213, 111, 0.8), rgba(22, 136, 98, 0.8)), url(../img/midSection.jpg);
   background-position: bottom;
   background-size: cover;
   margin-top: -15vh;
@@ -318,6 +460,14 @@ body {
 }
 .featureSection > * {
   transform: skewY(5deg);
+}
+
+.tourSection {
+  background-color: #f7f7f7;
+  margin-top: -15vh;
+  padding-top: 40vh;
+  padding-bottom: 30vh;
+  text-align: center;
 }
 
 /*# sourceMappingURL=style.css.map */

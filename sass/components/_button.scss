@@ -30,33 +30,25 @@
     }
 
     &--white {
-        padding: 1.5rem 3rem;
-        border-radius: 5rem;
-        position: relative;
         color: $colorFont-grey;
         background-color: white;
-        @include shadowNorm;
+
+        @include whitegreen;
 
         &::after {
-            content: "";
-            position: absolute;
-            top: 0;
-            left: 0;
-            height: 100%;
-            width: 100%;
-            transition: all .3s;
             background-color: white;
-            border-radius: 5rem;
-            z-index: -1;
         }
+    }
 
-        &:active {
-            @include shadowClose;
-        }
+    &--green {
+        color: $colorFont-grey;
+        background-color: $colorPrimary;
+        color: white;
 
-        &:hover::after {
-            opacity: 0;
-            transform: scale(1.5);
+        @include whitegreen;
+
+        &::after {
+            background-color: $colorPrimary;
         }
     }
 }

@@ -19,6 +19,13 @@
     transform: skewY(-5deg);
     & > * {
         transform: skewY(5deg);
-    }
-    
+    }   
+}
+
+.tourSection {
+    background-color: $colorGrey-light;
+    margin-top: -15vh;
+    padding-top: 40vh;
+    padding-bottom: 30vh;
+    text-align: center;
 }

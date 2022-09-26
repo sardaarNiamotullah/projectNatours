@@ -6,10 +6,6 @@
     max-width: $gridWidth;
     margin: 0 auto;
 
-    &:not(:last-child) {
-        margin-bottom: $gridMargin;
-    }
-
     [class^=col-] {
         display: inline-block;
         float: left;

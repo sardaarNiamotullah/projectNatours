@@ -1,8 +1,14 @@
 //color
-$colorPrimary: #55c57a;
+$colorPrimary: #4ac774;
 $colorPrimary-light: #7ed56f;
-$colorPrimary-dark: #28b485;
+$colorPrimary-dark: #168862;
 $colorGrey-light: #f7f7f7;
+
+$colorSecondary: rgb(255, 214, 79);
+$colorSecondary-dark: rgb(212, 159, 11);
+
+$colorTertiary: rgb(71, 71, 190);
+$colorTertiary-dark: rgb(45, 45, 155);
 
 $colorFont-white: #fff;
 $colorFont-grey: #777;
@@ -11,3 +17,5 @@ $colorFont-black: #000;
 //measuringUnits
 $gridWidth: 114rem;
 $gridMargin: 7rem;
+
+$borderRadius: .5rem;

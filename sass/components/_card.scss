@@ -1,0 +1,134 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/mixins" as *;
+
+.cardHolder {
+    position: relative;
+    width: 95%;
+    aspect-ratio: 1/1.55;
+    margin-bottom: 3rem;
+    perspective: 100rem;
+
+    .card {
+        position: absolute;
+        width: 100%;
+        aspect-ratio: 1/1.55;
+        border-radius: $borderRadius;
+        backface-visibility: hidden;
+        transition: all 1s ease;
+        @include shadowNorm-big;
+
+        &__front {
+            background-color: $colorFont-white;
+        }
+
+        &__back {
+            transform: rotateY(180deg);
+            color: $colorFont-white;
+
+            &--1 {
+                background: linear-gradient(to right bottom, $colorSecondary, $colorSecondary-dark)
+            }
+
+            &--2 {
+                background: linear-gradient(to right bottom, $colorPrimary, $colorPrimary-dark)
+            }
+
+            &--3 {
+                background: linear-gradient(to right bottom, $colorTertiary, $colorTertiary-dark)
+            }
+        }
+
+        &__picture {
+            position: absolute;
+            width: 100%;
+            aspect-ratio: 1/.6;
+            background-size: cover;
+            background-position: center;
+            clip-path: polygon(0 0, 100% 0, 100% 85%, 0 100%);
+            overflow: hidden;
+            border-radius: $borderRadius $borderRadius 0 0;
+            background-blend-mode: screen;
+
+            &--1 {
+                background-image: linear-gradient(to right bottom, $colorSecondary, $colorSecondary-dark),
+                    url(../img/tourOption1.jpg);
+            }
+
+            &--2 {
+                background-image: linear-gradient(to right bottom, $colorPrimary, $colorPrimary-dark),
+                    url(../img/tourOption2.jpg);
+            }
+
+            &--3 {
+                background-image: linear-gradient(to right bottom, $colorTertiary, $colorTertiary-dark),
+                    url(../img/tourOption3.jpg);
+            }
+        }
+
+        &__heading {
+            text-align: right;
+            position: absolute;
+            width: 55%;
+            top: 28%;
+            right: 10%;
+            color: white;
+            font-size: 2.25rem;
+            font-weight: 400;
+
+            .span__heading {
+                -webkit-box-decoration-break: clone;
+                padding: 1rem 1rem;
+
+                &--1 {
+                    background: linear-gradient(to right bottom, rgba($colorSecondary, .85), rgba($colorSecondary-dark, .85))
+                }
+
+                &--2 {
+                    background: linear-gradient(to right bottom, rgba($colorPrimary, .85), rgba($colorPrimary-dark, .85))
+                }
+
+                &--3 {
+                    background: linear-gradient(to right bottom, rgba($colorTertiary, .85), rgba($colorTertiary-dark, .85))
+                }
+            }
+
+        }
+
+        .fasilities {
+            font-size: 1.5rem;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, 5%);
+            list-style: none;
+
+            &__item {
+                border-bottom: 1px solid rgba(221, 214, 214, .8);
+                padding: .6rem 0;
+            }
+        }
+
+        &__cta {
+            padding-top: 40%;
+
+            .only {
+                text-transform: uppercase;
+                font-weight: 400;
+            }
+
+            .priceTag {
+                font-size: 6rem;
+                font-weight: 100;
+                margin-bottom: 5.5rem;
+            }
+        }
+    }
+
+    &:hover .card__front {
+        transform: rotateY(-180deg);
+    }
+
+    &:hover .card__back {
+        transform: rotateY(0deg);
+    }
+}
