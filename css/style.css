@@ -51,7 +51,7 @@ html {
 }
 
 body {
-  padding: 2.5rem;
+  padding: 3.5rem;
   box-sizing: border-box;
 }
 
@@ -388,6 +388,80 @@ body {
   transform: rotateY(0deg);
 }
 
+.reviewBox {
+  position: relative;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: 10rem auto;
+  padding: 5%;
+  width: 80%;
+  aspect-ratio: 1/0.25;
+  transform: skewX(-10deg);
+  border-radius: 0.5rem;
+}
+.reviewBox > * {
+  transform: skewX(10deg);
+}
+.reviewBox .reviewerFig {
+  position: relative;
+  height: 15rem;
+  width: 15rem;
+  float: left;
+  margin: auto 0;
+  overflow: hidden;
+  clip-path: circle(50% at 50% 50%);
+  shape-outside: circle(50% at 50% 50%);
+}
+.reviewBox .reviewerFig .reviewerPicture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transform: scale(1.05);
+}
+.reviewBox .reviewerFig .reviewerCaption {
+  color: white;
+  font-size: 2rem;
+  position: absolute;
+  text-align: center;
+  z-index: 1;
+  top: 50%;
+  left: 50%;
+  transition: all 0.5s;
+  transform: translate(-50%, 10%);
+  opacity: 0;
+}
+.reviewBox .sideFig {
+  text-align: left;
+  padding: 0rem 5rem;
+  transform: translateX(2.5%) skewX(10deg);
+}
+.reviewBox .sideFig .reviewerHeading {
+  margin-bottom: 1rem;
+}
+.reviewBox:hover .reviewerCaption {
+  opacity: 1;
+  transform: translate(-50%, -50%);
+}
+.reviewBox:hover .reviewerPicture {
+  filter: blur(3px) brightness(70%);
+  transform: scale(1);
+}
+
+.bgVideo {
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  overflow: hidden;
+  opacity: 0.2;
+}
+.bgVideo__content {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
 .row {
   max-width: 114rem;
   margin: 0 auto;
@@ -466,7 +540,14 @@ body {
   background-color: #f7f7f7;
   margin-top: -15vh;
   padding-top: 40vh;
-  padding-bottom: 30vh;
+  padding-bottom: 15vh;
+  text-align: center;
+}
+
+.reviewSection {
+  position: relative;
+  padding-top: 15vh;
+  padding-bottom: 15vh;
   text-align: center;
 }
 

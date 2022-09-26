@@ -1,0 +1,70 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+.reviewBox {
+
+    position: relative;
+    background-color: rgba($colorFont-white, .8);
+    margin: 10rem auto;
+    padding: 5%;
+    width: 80%;
+    aspect-ratio: 1/.25;
+    transform: skewX(-10deg);
+    border-radius: $borderRadius;
+
+    & > * {
+        transform: skewX(10deg);
+    }
+
+    .reviewerFig {
+        position: relative;
+        height: 15rem;
+        width: 15rem;
+        float: left;
+        margin: auto 0;
+        overflow: hidden;
+        clip-path: circle(50% at 50% 50%);
+        shape-outside: circle(50% at 50% 50%);
+
+        .reviewerPicture {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1.05);
+        }
+
+        .reviewerCaption {
+            color: rgba($colorFont-white, 1);
+            font-size: 2rem;
+            position: absolute;
+            text-align: center;
+            z-index: 1;
+            top: 50%;
+            left: 50%;
+            transition: all .5s;
+            transform: translate(-50%, 10%);
+            opacity: 0;
+        }
+    }
+
+    .sideFig {
+        text-align: left;
+        padding: 0rem 5rem;
+        transform: translateX(2.5%) skewX(10deg);
+
+        .reviewerHeading {margin-bottom: 1rem;}
+    }
+
+    &:hover {
+
+        .reviewerCaption {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+        
+        .reviewerPicture {
+            filter: blur(3px) brightness(70%);
+            transform: scale(1);
+        }
+    }
+}
