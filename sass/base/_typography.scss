@@ -46,9 +46,12 @@ body {
     background: linear-gradient(to right, $colorPrimary-light, $colorPrimary-dark);
     -webkit-background-clip: text;
     transition: all .2s;
+    transform-origin: center;
 
     &:hover {
-        transform: skew(10deg, 2deg);
+        transform-origin: center;
+        transform: skew(10deg, 2deg) scale(1.1);
+        text-shadow: 0 5px 20px rgba(0, 0, 0, 0.3); 
     }
 }
 

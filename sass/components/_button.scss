@@ -2,15 +2,15 @@
 @use "../abstracts/mixins" as *;
 
 .btn {
-
+    &,
     &:link,
     &:visited {
         transition: all .2s;
         text-decoration: none;
         display: inline-block;
     }
-    &:hover {transform: translateY(-1px);}
-    &:active {transform: translateY(1px);}
+    &:hover, &:focus {transform: translateY(-1px);}
+    &:active, &:focus {transform: translateY(1px);}
     &--animated {animation: moveUp 1.5s ease-out .5s backwards;}
 
     &--secondary {

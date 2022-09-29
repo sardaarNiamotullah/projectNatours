@@ -36,3 +36,23 @@
     padding-bottom: 15vh;
     text-align: center;
 }
+
+.bookingSection {
+    background-image: linear-gradient(to right, $colorPrimary-light, $colorPrimary-dark);
+    padding: 20vh 12.5vh;
+
+    .bookingBox {
+        width: 100%;
+        // aspect-ratio: 1/.5;
+        margin: 0 auto;
+        background-image: linear-gradient(-70deg, transparent 50%, rgba(white, .85) 50%) ,url(../img/formBG.jpg);
+        background-size: cover;
+        background-position: top;
+        border-radius: $borderRadius;
+        padding: 5% 5%;
+
+        .headingSecondary {
+            display: inline-block;
+        }
+    }
+}
