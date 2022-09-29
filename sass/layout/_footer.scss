@@ -1,0 +1,73 @@
+@use "../abstracts/mixins" as *;
+@use "../abstracts/variables" as *;
+
+footer {
+    background-color: rgba(32, 30, 30, 0.783);
+    color: rgb(236, 229, 229);
+    padding: 20vh 0;
+}
+
+.footer {
+
+    &__logoBox {
+        text-align: center;
+        margin-bottom: 7%;
+    }
+
+    &__List {
+        list-style: none;
+        float: left;
+        border-top: 1px solid white;
+        padding-top: 1rem;
+        text-transform: uppercase;
+
+        &--item {
+            display: inline-block;
+            transition: all .2s;
+
+            &:not(:last-child) {
+                margin-right: 1rem;
+            }
+
+            &:hover {
+                @include shadowNorm;
+                color: $colorPrimary;
+                scale: 1.1;
+
+                &:nth-child(odd) {
+                    transform: skewY(10deg);
+                }
+
+                &:nth-child(even) {
+                    transform: skewY(-10deg);
+                }
+            }
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        width: 43%;
+        float: right;
+        border-top: 1px solid white;
+        padding-top: 1rem;
+    }
+
+    &__courseLink {
+        transition: all .2s;
+        display: inline-block;
+        &:visited,
+        &:link {
+            color: rgb(236, 229, 229);
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        &:hover {
+            @include shadowNorm;
+            color: $colorPrimary;
+            scale: 1.1;
+            transform: skewY(10deg);
+        }
+    }
+}

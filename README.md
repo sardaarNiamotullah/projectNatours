@@ -1,6 +1,6 @@
 ### To view the project [**CLICK HERE!**](https://sardaarniamotullah.github.io/projectNatours/) <br><br>
 
-I have created this project website during doing a course from Udemy named [**Advanced CSS**](https://www.udemy.com/course/advanced-css-and-sass/) by **Jonas Schmedtmann**. The design and instruction credit goes to my instructor. <br>
+I have created this project website during doing a course from Udemy named [**Advanced CSS**](https://www.udemy.com/course/advanced-css-and-sass/) by **Jonas Schmedtmann**. The credit of instruction and design of the site goes to my instructor. <br>
 
 I have learned a lot of new things about CSS in this course. Among them, some things that are worth mentioning... <br><br>
 - How to write scaleable and maintainable CSS.

@@ -628,6 +628,64 @@ body {
   height: 3rem;
 }
 
+footer {
+  background-color: rgba(32, 30, 30, 0.783);
+  color: rgb(236, 229, 229);
+  padding: 20vh 0;
+}
+
+.footer__logoBox {
+  text-align: center;
+  margin-bottom: 7%;
+}
+.footer__List {
+  list-style: none;
+  float: left;
+  border-top: 1px solid white;
+  padding-top: 1rem;
+  text-transform: uppercase;
+}
+.footer__List--item {
+  display: inline-block;
+  transition: all 0.2s;
+}
+.footer__List--item:not(:last-child) {
+  margin-right: 1rem;
+}
+.footer__List--item:hover {
+  box-shadow: 0 0.5rem 2.5rem 1rem rgba(0, 0, 0, 0.1);
+  color: #4ac774;
+  scale: 1.1;
+}
+.footer__List--item:hover:nth-child(odd) {
+  transform: skewY(10deg);
+}
+.footer__List--item:hover:nth-child(even) {
+  transform: skewY(-10deg);
+}
+.footer__copyright {
+  text-align: center;
+  width: 43%;
+  float: right;
+  border-top: 1px solid white;
+  padding-top: 1rem;
+}
+.footer__courseLink {
+  transition: all 0.2s;
+  display: inline-block;
+}
+.footer__courseLink:visited, .footer__courseLink:link {
+  color: rgb(236, 229, 229);
+  text-decoration: none;
+  font-weight: bold;
+}
+.footer__courseLink:hover {
+  box-shadow: 0 0.5rem 2.5rem 1rem rgba(0, 0, 0, 0.1);
+  color: #4ac774;
+  scale: 1.1;
+  transform: skewY(10deg);
+}
+
 .aboutSection {
   background-color: #f7f7f7;
   margin-top: -15vh;
