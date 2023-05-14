@@ -15,8 +15,13 @@ I have learned a lot of new things about CSS in this course. Among them, some th
     aspect-ration: ;
     filter: blur() brightness();
     clip-path: linear-gradient(), circle(50% at 50% 50%);
+    outline;
+    outline-offset;
     shape-outside: ;
+    object-fit: cover;
+    box-decoration-break: clone;
     input:placeholder-shown +/~ . {}
     input:checked {}
     input:focus {}
+    input:invalid {}
  -->
