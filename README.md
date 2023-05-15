@@ -24,4 +24,8 @@ I have learned a lot of new things about CSS in this course. Among them, some th
     input:checked {}
     input:focus {}
     input:invalid {}
+    column-count: 2;
+    column-gap: 2px;
+    column-rule: 1px solid black;
+    hyphen: auto;
  -->

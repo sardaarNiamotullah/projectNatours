@@ -6,8 +6,7 @@
         content: "";
         display: table;
         clear: both;
-    }
-    
+    }    
 }
 
 @mixin shadowNorm {
@@ -57,4 +56,11 @@
         opacity: 0;
         transform: scale(1.5);
     }
+}
+
+@mixin absCenter {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 }

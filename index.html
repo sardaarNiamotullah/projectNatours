@@ -19,7 +19,7 @@
 </head>
 
 <body>
-    
+
     <section class="navigation">
         <input type="checkbox" class="navigation__checkbox" id="navCheckbox">
         <label for="navCheckbox" class="navigation__button">
@@ -37,9 +37,6 @@
         </nav>
     </section>
 
-
-
-
     <header class="header">
         <div class="header__logoBox">
             <img src="img/logo-white.png" alt="brandlogo" class="header__Logo">
@@ -52,12 +49,14 @@
                         class="headingPrimary--lastLetter">s</span></span>
             </h1>
 
-            <a href="#" class="btn btn--white btn--animated">
+            <a href="#tourSection" class="btn btn--white btn--animated">
                 Discover our tours
             </a>
         </div>
     </header>
+
     <main>
+
         <section class="aboutSection">
             <h2 class="headingSecondary marginBottom-big">Exciting tours for adventurous people</h2>
 
@@ -140,7 +139,7 @@
             </div>
         </section>
 
-        <section class="tourSection">
+        <section class="tourSection" id="tourSection">
             <h2 class="headingSecondary marginBottom-big">
                 Most Popular tours
             </h2>
@@ -164,7 +163,7 @@
                             <div class="card__cta">
                                 <p class="only">Only</p>
                                 <p class="priceTag">$299</p>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -188,7 +187,7 @@
                             <div class="card__cta">
                                 <p class="only">Only</p>
                                 <p class="priceTag">$499</p>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -212,7 +211,7 @@
                             <div class="card__cta">
                                 <p class="only">Only</p>
                                 <p class="priceTag">$899</p>
-                                <a href="#" class="btn btn--white">Book now!</a>
+                                <a href="#popup" class="btn btn--white">Book now!</a>
                             </div>
                         </div>
                     </div>
@@ -266,7 +265,6 @@
                             quasi
                             aliquam hic id vero delectus maiores!</p>
                     </div>
-
                 </div>
             </div>
 
@@ -304,6 +302,7 @@
     </main>
 
     <footer>
+
         <div class="row footer">
             <div class="footer__logoBox">
                 <img src="img/logo-green-1x.png" alt="footer logo" class="footer__logoBox__logo">
@@ -322,9 +321,34 @@
                 by <b>Jonas Schmedtmann</b>. The credit of instruction and design of the site goes to my instructor. <br> 
                 &copy; by <b>Jonas Schmedtmann</b>.
             </p>
-
         </div>
+
     </footer>
+
+    <div class="popup" id="popup">
+        <div class="popup__box">
+            <a href="#tourSection" class="popup__close">&times;</a>
+            <div class="popup__left">
+                <img src="./img/reviewer.jpg" alt="" class="popup__img">
+                <img src="./img/reviewer2.jpg" alt="" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <h2 class="headingSecondary marginBottom-medium">Start Booking Now</h2>
+                <h3 class="headingTertiary marginBottom-small">Important &ndash; Please read these terms before booking.</h3>
+                <p class="popup__paragraph">Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                    Ipsa eveniet natus praesentium dolor ea ex sunt aliquid, 
+                    incidunt laborum beatae nihil modi? Quia dignissimos commodi dolorum eveniet, 
+                    reprehenderit magnam nisi! Ipsa eveniet natus praesentium dolor ea ex sunt aliquid, 
+                    incidunt laborum beatae nihil modi? Quia dignissimos commodi dolorum eveniet, 
+                    reprehenderit magnam nisi! Ipsa eveniet natus praesentium dolor ea ex sunt aliquid, 
+                    incidunt laborum beatae nihil modi? Quia dignissimos commodi dolorum eveniet, 
+                    reprehenderit magnam nisi!
+                    Ipsa eveniet natus praesentium dolor ea ex sunt aliquid,
+                </p>
+                <a href="#" class="btn btn--green">Book now!</a>
+            </div>
+        </div>
+    </div>
 
     <!-- <section class="grid">
             <div class="row">
